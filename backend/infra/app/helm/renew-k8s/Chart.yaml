@@ -1,0 +1,4 @@
+apiVersion: v2
+name: renew-k8s
+description: A Helm chart to deploy the renew-k8s server-side application
+version: 0.1.0

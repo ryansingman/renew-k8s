@@ -1,0 +1,9 @@
+app:
+  replicaCount: 1
+
+  image:
+    repository: renew-k8s/backend/app
+    tag: latest
+
+  service:
+    port: 8080

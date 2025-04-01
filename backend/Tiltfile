@@ -1,0 +1,16 @@
+docker_build(
+    "renew-k8s/backend/app",
+    dockerfile="services/app/Dockerfile",
+    context="services/app",
+)
+
+k8s_yaml(helm(
+    "infra/app/helm/renew-k8s",
+    name="renew-k8s",
+))
+
+k8s_resource(
+    "renew-k8s-app",
+    port_forwards=[8080],
+    labels=["renew-k8s-app"],
+)
