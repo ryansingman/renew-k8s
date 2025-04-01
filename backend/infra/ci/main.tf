@@ -1,5 +1,6 @@
 provider "google" {
-  project = "renew-k8s"
+  project = var.project_id
+  region  = var.region
 }
 
 provider "github" {}
